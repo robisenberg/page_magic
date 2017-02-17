@@ -155,8 +155,7 @@ module PageMagic
 
       it 'checks the current page' do
         page.class_eval do
-          def my_method
-          end
+          def my_method; end
         end
         expect(subject.respond_to?(:my_method)).to eq(true)
       end
